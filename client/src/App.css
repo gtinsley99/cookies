@@ -3,21 +3,36 @@ body{
   background-color: rgb(214, 204, 153)
 }
 
-.title{
+.nav{
   display: flex;
-  width: 100vw;
+  position: fixed;
+  width: 100%;
   justify-content: center;
   background-color: #445D48;;
   border-bottom: 3px solid rgb(178, 178, 178);
-  margin-bottom: 2%;
+ 
 }
 
-.titleLoggedIn{
+.navTitle{
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  width: 100vw;
+
+}
+
+.title{
+  margin-top: 8%;
+}
+
+.navLoggedIn{
   display: flex;
   justify-content: space-around;
-  width: 100%;
+  width: 100vw;
   align-items: center;
 }
+
+
 
 .loginForm{
   margin-top: 50%;
@@ -38,11 +53,18 @@ body{
   justify-content: center;
   flex-wrap: wrap;
   width: 80%;
+  margin-top: 1%;
+}
 
+.picBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
 }
 
 .picCard{
-  margin: 5px;
+  margin: 10px;
   padding: 10px;
   background-color: rgb(0, 21, 36);
   display: flex;
@@ -50,8 +72,12 @@ body{
   align-items: center;
 }
 
-.logOutCard{
+.logoutCard{
   display: flex;
+  position: fixed;
+  right: 0;
+  top: 4.4%;
+  margin-right: 15%;
   align-items: center;
   justify-content: center;
 }
