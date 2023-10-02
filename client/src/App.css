@@ -1,8 +1,52 @@
 body{
   background-color: aliceblue;
+ 
+}
+
+.title{
+  display: flex;
+  justify-content: center;
+}
+
+.titleLoggedIn{
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  align-items: center;
 }
 
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.picsCard{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.picCard{
+  margin: 5px;
+}
+
+.logOutCard{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button{
+  background-color: white;
+  padding: 2px 10px;
+  transition: 0.5s;
+}
+
+button:hover{
+  cursor: pointer;
+  background-color: rgb(207, 207, 207);
 }
 

@@ -14,7 +14,6 @@ const Picsapi = (setPics) => {
         }
         const data = await res.json();
         setPics(data);
-        console.log(data);
       } catch (error) {
         setErrors("Failed to fetch data");
         console.log(error);
