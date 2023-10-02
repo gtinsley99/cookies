@@ -3,8 +3,10 @@ import { useState } from "react";
 const Login = (props) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    props.setUser(username);
     setUsername("");
     setPassword("");
   };

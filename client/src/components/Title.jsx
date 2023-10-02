@@ -4,7 +4,10 @@ const Title = (props) => {
       {props.user === "" ? (
         <h1>Welcome to the site</h1>
       ) : (
+        <div>
         <h1>Hello {props.user}</h1>
+        <button onClick={() => props.setUser("")}>Logout</button>
+        </div>
       )}
     </div>
   );
