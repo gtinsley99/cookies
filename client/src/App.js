@@ -13,8 +13,8 @@ function App() {
 
   return (
     <div className="App">
-      <Title user={user} setUser={setUser}/>
-      {user === "" ? <Login setUser={setUser} /> : <Pics pics={pics}/>}
+      <Title user={user} setUser={setUser} />
+      {user === "" ? <Login setUser={setUser} /> : <Pics pics={pics} />}
     </div>
   );
 }

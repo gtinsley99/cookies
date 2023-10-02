@@ -1,18 +1,29 @@
 body{
-  background-color: aliceblue;
- 
+  overflow-x: hidden;
+  background-color: rgb(214, 204, 153)
 }
 
 .title{
   display: flex;
+  width: 100vw;
   justify-content: center;
+  background-color: #445D48;;
+  border-bottom: 3px solid rgb(178, 178, 178);
+  margin-bottom: 2%;
 }
 
 .titleLoggedIn{
   display: flex;
   justify-content: space-around;
-  width: 100vw;
+  width: 100%;
   align-items: center;
+}
+
+.loginForm{
+  margin-top: 50%;
+  background-color: #FDE5D4;
+  padding: 20px 50px;
+  border: 1px solid grey;
 }
 
 .App {
@@ -27,10 +38,16 @@ body{
   justify-content: center;
   flex-wrap: wrap;
   width: 80%;
+
 }
 
 .picCard{
   margin: 5px;
+  padding: 10px;
+  background-color: rgb(0, 21, 36);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logOutCard{
@@ -48,5 +65,14 @@ button{
 button:hover{
   cursor: pointer;
   background-color: rgb(207, 207, 207);
+}
+
+.inputField{
+  display: flex;
+  flex-direction: column;
+}
+
+input{
+  margin: 15px;
 }
 
