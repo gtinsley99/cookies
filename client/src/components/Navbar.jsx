@@ -2,6 +2,7 @@ const Navbar = (props) => {
   const handleClick = () => {
     props.removeCookie("username");
     props.setUser("");
+    props.setPage(1);
   };
   return (
     <div className="nav">
