@@ -14,7 +14,6 @@ const Picsapi = (setPics, cookies, setUser) => {
         }
         const data = await res.json();
         setPics(data);
-        console.log(cookies.username)
         if (cookies.username) {
           setUser(cookies.username)
         };

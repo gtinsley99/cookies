@@ -7,6 +7,7 @@ const Register = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     props.setUser(username);
+    props.setCookie("username", username, {maxAge: 604800, path: "/"});
     setUsername("");
     setPassword("");
   };
