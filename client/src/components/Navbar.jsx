@@ -1,4 +1,8 @@
 const Navbar = (props) => {
+  const handleClick = () => {
+    props.removeCookie("username");
+    props.setUser("");
+  };
   return (
     <div className="nav">
       {props.user === "" ? (
@@ -6,7 +10,7 @@ const Navbar = (props) => {
       ) : (
         <div>
           <h1 className="navTitle">Hello {props.user}</h1>
-          <button className="logoutCard" onClick={() => props.setUser("")}>
+          <button className="logoutCard" onClick={handleClick}>
             Logout
           </button>
         </div>
