@@ -25,7 +25,7 @@ function App() {
   return (
     <div className="App">
       {/* Navbar with logout button*/}
-      {showNav && <Navbar user={user} setUser={setUser} removeCookie={removeCookie} />}
+      {showNav && <Navbar user={user} setUser={setUser} removeCookie={removeCookie} setPage={setPage}/>}
       {/* Show when logged out or when logged in */}
       {user === "" ? (
         <>
