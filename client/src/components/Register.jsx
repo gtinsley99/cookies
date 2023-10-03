@@ -1,19 +1,18 @@
 import { useState } from "react";
 
-const Login = (props) => {
+const Register = (props) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     props.setUser(username);
-    props.setCookie("username", username, {maxAge: 604800, path: "/"});
     setUsername("");
     setPassword("");
   };
   return (
-    <div className="loginDiv">
-      <h2>Login</h2>
+    <div className="registerDiv">
+        <h2>Register</h2>
       <form onSubmit={handleSubmit} className="loginForm">
         <div className="inputField">
           <label>Username:</label>
@@ -32,10 +31,10 @@ const Login = (props) => {
             type="password"
           ></input>
         </div>
-        <button type="submit">Login</button>
+        <button type="submit">Register</button>
       </form>
     </div>
   );
 };
 
-export default Login;
+export default Register;

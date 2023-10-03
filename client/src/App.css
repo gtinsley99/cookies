@@ -35,10 +35,17 @@ body{
 
 
 .loginForm{
-  margin-top: 50%;
   background-color: #FDE5D4;
   padding: 20px 50px;
   border: 1px solid grey;
+}
+
+.loginDiv{
+  margin-top: 2%;
+}
+
+.registerDiv{
+  margin-top: 100px;
 }
 
 .App {
