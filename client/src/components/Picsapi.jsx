@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const Picsapi = (setPics) => {
+const Picsapi = (setPics, cookies, setUser) => {
   const [errors, setErrors] = useState(null);
 
   useEffect(() => {
@@ -14,6 +14,9 @@ const Picsapi = (setPics) => {
         }
         const data = await res.json();
         setPics(data);
+        if (cookies.username) {
+          setUser(cookies.username)
+        };
       } catch (error) {
         setErrors("Failed to fetch data");
         console.log(error);
