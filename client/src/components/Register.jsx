@@ -13,7 +13,7 @@ const Register = (props) => {
   };
   return (
     <div className="registerDiv">
-        <h2>Register</h2>
+        <h2>Register here</h2>
       <form onSubmit={handleSubmit} className="loginForm">
         <div className="inputField">
           <label>Username:</label>
