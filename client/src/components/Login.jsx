@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { faker } from "@faker-js/faker";
 
 const Login = (props) => {
   const [username, setUsername] = useState("");
@@ -8,6 +9,8 @@ const Login = (props) => {
     e.preventDefault();
     props.setUser(username);
     props.setCookie("username", username, {maxAge: 604800, path: "/"});
+    props.setCookie("userAvatar", faker.image.avatar(), {maxAge: 604800, path: "/"});
+    props.setUserPic(props.cookies.userAvatar);
     setUsername("");
     setPassword("");
   };

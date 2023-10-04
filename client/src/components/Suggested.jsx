@@ -1,29 +1,35 @@
-const Suggested = () => {
+import { faker } from "@faker-js/faker";
+
+const Suggested = (props) => {
   return (
     <div className="suggested">
       <div className="suggDiv">
-        <p>prof pic</p>
-        <p> prof name</p>
+        <img className="profPic" src={props.cookies.userAvatar}></img>
+        <p>{props.user}</p>
         <p className="blueLink">Switch</p>
       </div>
-      <div className="suggDiv">
+      <div className="suggGrey">
         <p className="greyText">Suggested for you</p>
         <p className="blackLink">See All</p>
       </div>
       <div className="suggDiv">
-        <p>name1</p>
+        <img className="profPic" src={faker.image.avatar()}></img>
+        <p>{faker.internet.userName()}</p>
         <p className="blueLink">Follow</p>
       </div>
       <div className="suggDiv">
-        <p>name2</p>
+        <img className="profPic" src={faker.image.avatar()}></img>
+        <p>{faker.internet.userName()}</p>
         <p className="blueLink">Follow</p>
       </div>
       <div className="suggDiv">
-        <p>name3</p>
+        <img className="profPic" src={faker.image.avatar()}></img>
+        <p>{faker.internet.userName()}</p>
         <p className="blueLink">Follow</p>
       </div>
       <div className="suggDiv">
-        <p>name4</p>
+        <img className="profPic" src={faker.image.avatar()}></img>
+        <p>{faker.internet.userName()}</p>
         <p className="blueLink">Follow</p>
       </div>
       <div className="infoLinks">

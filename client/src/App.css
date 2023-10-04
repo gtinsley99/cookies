@@ -120,8 +120,10 @@ h3 {
 .picCard {
   margin: 10px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-bottom: 2px solid grey;
 }
 
 .pic{
@@ -164,16 +166,34 @@ input {
   flex-direction: column;
   position: absolute;
   right: 0;
-  margin-top: 100px;
+  margin: 100px 100px 0px 0px;
+  width: 300px;
 }
 
 .suggDiv{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 5px 100px;
+  margin: 5px;
   font-size: 15px;
   width: 100%;
+}
+
+.suggDiv :hover{
+  cursor: pointer;
+}
+
+.blackLink :hover{
+  cursor: pointer;
+  color: grey;
+}
+
+.suggGrey{
+  display: flex;
+  margin: 5px;
+  font-size: 15px;
+  width: 100%;
+  justify-content: space-around;
 }
 
 .blueLink{
@@ -196,7 +216,7 @@ input {
   flex-direction: column;
   align-items: center;
   color: grey;
-  width: 70%;
+  width: 90%;
   font-size: 12px;
 }
 
@@ -211,3 +231,13 @@ input {
   flex-wrap: wrap;
   margin: 0px;
 }
+
+.profPic{
+  width:30px;
+  border-radius: 50%;
+}
+
+.prof{
+  display: flex;
+}
+
