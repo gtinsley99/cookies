@@ -1,12 +1,21 @@
 import { faker } from "@faker-js/faker";
 
 const Suggested = (props) => {
+  const handleClick = () => {
+    props.removeCookie("username");
+    props.removeCookie("userAvatar");
+    props.setUser("");
+  };
   return (
     <div className="suggested">
       <div className="suggDiv">
-        <img className="profPic" src={props.cookies.userAvatar} alt="avatar"></img>
-        <p>{props.user}</p>
-        <p className="blueLink">Switch</p>
+        <img
+          className="profPic"
+          src={props.cookies.userAvatar}
+          alt="avatar"
+        ></img>
+        <p className="name">{props.user}</p>
+        <p className="blueLink" onClick={handleClick}>Switch</p>
       </div>
       <div className="suggGrey">
         <p className="greyText">Suggested for you</p>
@@ -14,22 +23,22 @@ const Suggested = (props) => {
       </div>
       <div className="suggDiv">
         <img className="profPic" src={faker.image.avatar()} alt="avatar"></img>
-        <p>{faker.internet.userName()}</p>
+        <p className="name">{faker.internet.userName()}</p>
         <p className="blueLink">Follow</p>
       </div>
       <div className="suggDiv">
         <img className="profPic" src={faker.image.avatar()} alt="avatar"></img>
-        <p>{faker.internet.userName()}</p>
+        <p className="name">{faker.internet.userName()}</p>
         <p className="blueLink">Follow</p>
       </div>
       <div className="suggDiv">
         <img className="profPic" src={faker.image.avatar()} alt="avatar"></img>
-        <p>{faker.internet.userName()}</p>
+        <p className="name">{faker.internet.userName()}</p>
         <p className="blueLink">Follow</p>
       </div>
       <div className="suggDiv">
         <img className="profPic" src={faker.image.avatar()} alt="avatar"></img>
-        <p>{faker.internet.userName()}</p>
+        <p className="name">{faker.internet.userName()}</p>
         <p className="blueLink">Follow</p>
       </div>
       <div className="infoLinks">

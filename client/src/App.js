@@ -8,6 +8,7 @@ import Register from "./components/Register";
 import SideBar from "./components/Sidebar";
 import Suggested from "./components/Suggested";
 import { useCookies } from "react-cookie";
+import TopPics from "./components/TopPics";
 
 function App() {
   const [user, setUser] = useState("");
@@ -16,21 +17,21 @@ function App() {
 
   Picsapi(setPics, cookies, setUser);
 
-
   return (
     <div className="App">
       {/* Navbar with logout button*/}
-      <Navbar user={user} setUser={setUser} removeCookie={removeCookie}  />
+      <Navbar user={user}  />
       {/* Show when logged out or when logged in */}
       {user === "" ? (
         <>
-          <Register setUser={setUser} setCookie={setCookie}  cookies={cookies} />
-          <Login setUser={setUser} setCookie={setCookie}  cookies={cookies}/>
+          <Register setUser={setUser} setCookie={setCookie} cookies={cookies} />
+          <Login setUser={setUser} setCookie={setCookie} cookies={cookies} />
         </>
       ) : (
         <>
-          <SideBar cookies= {cookies} />
-          <Suggested user={user} cookies={cookies} />
+          <TopPics />
+          <SideBar cookies={cookies} />
+          <Suggested user={user} cookies={cookies} setUser={setUser} removeCookie={removeCookie} />
           <Pics pics={pics} />
         </>
       )}

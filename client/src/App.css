@@ -23,6 +23,18 @@ body {
   margin-right: 20px;
 }
 
+.icon:hover{
+  cursor: pointer;
+}
+
+.saveIcon{
+  width: 20px;
+  height: 20px;
+}
+
+.saveIcon:hover{
+  cursor: pointer;
+}
 
 
 .sideProfPic{
@@ -238,12 +250,12 @@ input {
   position: absolute;
   right: 0;
   margin: 100px 5% 0px 0px;
-  width: 300px;
+  width: 280px;
 }
 
 .suggDiv{
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
 
   font-size: 13px;
@@ -254,20 +266,37 @@ input {
   cursor: pointer;
 }
 
-.blackLink :hover{
+.name{
+  margin-left: 10px;
+}
+
+.blackLink{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.blackLink:hover{
   cursor: pointer;
   color: grey;
 }
 
 .suggGrey{
   display: flex;
-  margin: 5px;
-  font-size: 15px;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 13px;
   width: 100%;
-  justify-content: space-around;
 }
 
 .blueLink{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-right: 20px;
   font-weight: bold;
   font-size: 12px;
   color: #0095F6;
@@ -279,6 +308,8 @@ input {
 }
 
 .greyText{
+  margin: 20px 0px;
+  width: 200px;
   color: grey;
 }
 
@@ -308,14 +339,68 @@ input {
   border-radius: 50%;
 }
 
+.topProfPics{
+  width:30px;
+  border-radius: 50%;
+  border: 1px solid white;
+  transform: rotate(-45deg);
+}
+
+.topProfPic{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ padding: 2px;
+ background: linear-gradient(rgb(236, 3, 170), rgb(255, 166, 0)); 
+ transform: rotate(45deg);
+ border-radius: 50%;
+}
+
 .picFeed{
   width:30px;
   border-radius: 50%;
   margin-right: 10px;
 }
 
+.topUsers{
+  font-size: 10px;
+  margin: 10px 5px;
+  width: 50px;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+.topDiv :hover{
+  cursor: pointer;
+}
+
+.topDiv{
+  display: flex;
+  margin-top: 30px;
+}
+
+.top{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .prof{
   display: flex;
+}
+
+.feedIcons{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#save{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media only screen and (max-width: 1350px) {
