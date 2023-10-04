@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       {/* Navbar with logout button*/}
-      <Navbar user={user} setUser={setUser} removeCookie={removeCookie} />
+      <Navbar user={user}  />
       {/* Show when logged out or when logged in */}
       {user === "" ? (
         <>
@@ -31,7 +31,7 @@ function App() {
         <>
           <TopPics />
           <SideBar cookies={cookies} />
-          <Suggested user={user} cookies={cookies} />
+          <Suggested user={user} cookies={cookies} setUser={setUser} removeCookie={removeCookie} />
           <Pics pics={pics} />
         </>
       )}

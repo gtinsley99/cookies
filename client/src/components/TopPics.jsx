@@ -11,7 +11,7 @@ const TopPics = () => {
         return(
         <div key={index} className="top" >
             <div className="topProfPic">
-            <img className="profPic" src={faker.image.avatar()}></img>
+            <img className="topProfPics" src={faker.image.avatar()}></img>
             </div>
             <p className="topUsers">{faker.internet.userName()}</p>
         </div>);
