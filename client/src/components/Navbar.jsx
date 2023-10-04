@@ -1,16 +1,16 @@
 const Navbar = (props) => {
   const handleClick = () => {
     props.removeCookie("username");
+    props.removeCookie("userAvatar");
     props.setUser("");
-    props.setPage(1);
   };
   return (
     <div className="nav">
       {props.user === "" ? (
-        <h1>Welcome to the site</h1>
+        <h1>Welcome to the Instagram clone</h1>
       ) : (
         <div>
-          <h1 className="navTitle">Hello {props.user}</h1>
+          <h1 className="navTitle">{props.user}'s: feed</h1>
           <button className="logoutCard" onClick={handleClick}>
             Logout
           </button>

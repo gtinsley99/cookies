@@ -1,51 +1,126 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
   overflow-x: hidden;
-  background-color: rgb(214, 204, 153)
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
-.nav{
+.nav {
   display: flex;
-  position: fixed;
   width: 100%;
   justify-content: center;
-  background-color: #445D48;;
-  border-bottom: 3px solid rgb(178, 178, 178);
- 
 }
 
-.navTitle{
+.logo{
+  margin-left: 18px;
+  width: 100px;
+}
+
+.icon{
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+
+
+
+.sideProfPic{
+  width: 20px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.topBar :hover{
+  cursor: pointer;
+}
+
+.navTitle {
   display: flex;
   justify-content: center;
   z-index: 2;
   width: 100vw;
-
 }
 
-.title{
-  margin-top: 8%;
+.title {
+  margin-top: 1%;
 }
 
-.navLoggedIn{
+.navLoggedIn {
   display: flex;
   justify-content: space-around;
   width: 100vw;
   align-items: center;
 }
 
-
-
-.loginForm{
-  background-color: #FDE5D4;
-  padding: 20px 50px;
-  border: 1px solid grey;
+.sideBar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  left: 0;
+  border-right: 1px solid grey;
+  height: 100vh;
+  padding-right: 50px;
 }
 
-.loginDiv{
+h3 {
+  margin-left: 20px;
+  font-weight: normal;
+  
+ 
+}
+
+.topBar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10% 0%;
+}
+
+.midBar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.barCont{
+  display: flex;
+  justify-content: flex-start;
+  margin: 5% 0 5% 20px;
+  padding: 10px;
+  border-radius: 6%;
+  transition: 0.5s;
+  width: 100%;
+  font-size: 14px;
+}
+
+.barCont:hover{
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0.372);
+}
+
+.botBar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 1%;
+}
+
+
+.loginForm {
+  padding: 20px 50px;
+  border: 2px solid black;
+}
+
+.loginDiv {
   margin-top: 2%;
 }
 
-.registerDiv{
-  margin-top: 100px;
+.registerDiv {
+  margin-top: 10px;
 }
 
 .App {
@@ -55,33 +130,80 @@ body{
   align-items: center;
 }
 
-.picsCard{
+.picsCard {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
   width: 80%;
   margin-top: 1%;
 }
 
-.picBox{
+.picBox {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 100px;
 }
 
-.picCard{
+.picCard {
   margin: 10px;
-  padding: 10px;
-  background-color: rgb(0, 21, 36);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-bottom: 2px solid grey;
 }
 
-.logoutCard{
+.feedUsers{
   display: flex;
-  position: fixed;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.pic{
+  border-radius: 10px;
+}
+
+.picUser{
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.picUser :hover{
+  cursor: pointer;
+}
+
+
+.picUserLoc{
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-left: 40px;
+  margin-top: 0;
+  font-size: 13px;
+}
+
+.likes{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.picUserLoc :hover{
+  cursor: pointer;
+}
+
+
+.logoutCard {
+  display: flex;
+  position: absolute;
   right: 0;
   top: 4.4%;
   margin-right: 15%;
@@ -89,23 +211,121 @@ body{
   justify-content: center;
 }
 
-button{
+button {
   background-color: white;
   padding: 2px 10px;
   transition: 0.5s;
 }
 
-button:hover{
+button:hover {
   cursor: pointer;
   background-color: rgb(207, 207, 207);
 }
 
-.inputField{
+.inputField {
   display: flex;
   flex-direction: column;
 }
 
-input{
+input {
   margin: 15px;
 }
 
+.suggested{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  margin: 100px 5% 0px 0px;
+  width: 300px;
+}
+
+.suggDiv{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  font-size: 13px;
+  width: 100%;
+}
+
+.suggDiv :hover{
+  cursor: pointer;
+}
+
+.blackLink :hover{
+  cursor: pointer;
+  color: grey;
+}
+
+.suggGrey{
+  display: flex;
+  margin: 5px;
+  font-size: 15px;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.blueLink{
+  font-weight: bold;
+  font-size: 12px;
+  color: #0095F6;
+}
+
+.blueLink:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.greyText{
+  color: grey;
+}
+
+.infoLinks{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: grey;
+  width: 90%;
+  font-size: 12px;
+}
+
+
+.infoLink:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.info{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px;
+}
+
+.profPic{
+  width:30px;
+  border-radius: 50%;
+}
+
+.picFeed{
+  width:30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.prof{
+  display: flex;
+}
+
+@media only screen and (max-width: 1350px) {
+  .suggested{
+    margin-right: 1%;
+  }
+}
+
+@media only screen and (max-width: 1225px) {
+  .suggested{
+    display: none;
+  }
+}

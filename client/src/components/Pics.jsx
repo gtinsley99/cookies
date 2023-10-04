@@ -1,36 +1,28 @@
-import { useState } from "react";
+import {faker} from "@faker-js/faker";
 
 const Pics = (props) => {
-  const [sliceStart, setSliceStart] = useState(0);
-  const [sliceEnd, setSliceEnd] = useState(15);
-  const [button, setButton] = useState("Next page")
 
   const handleClick = () => {
-    if (sliceStart === 0) {
-      setSliceStart(15);
-      setSliceEnd(30);
-      setButton("Previous page")
-      props.setPage(2);
-    } else {
-        setSliceStart(0);
-        setSliceEnd(15);
-        setButton("Next page");
-        props.setPage(1);
-    }
     window.scrollTo({top: 0, behavior: "smooth"});
   };
+
   return (
     <div className="picBox">
       <div className="picsCard">
-        {props.pics.slice(sliceStart, sliceEnd).map((item, index) => {
+        {props.pics.map((item, index) => {
           return (
             <div key={index} className="picCard">
-              <img src={item.download_url} width="300px" alt="APIpic"></img>
+              <div className="feedUsers">
+              <p className="picUser"> <img alt="avatar" className="picFeed" src={faker.image.avatar()}></img>{faker.internet.userName()} </p>
+              <p className="picUserLoc">{faker.location.city()}</p>
+              </div>
+              <img className="pic" src={item.download_url} width="500px" alt="APIpic"></img>
+              <p className="likes">{faker.number.int({max:500, min: 20})} likes</p>
             </div>
           );
         })}
       </div>
-      <button onClick={handleClick}>{button}</button>
+      <button onClick={handleClick}>Scroll to top</button>
     </div>
   );
 };
