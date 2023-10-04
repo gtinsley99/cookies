@@ -12,7 +12,10 @@ const Pics = (props) => {
         {props.pics.map((item, index) => {
           return (
             <div key={index} className="picCard">
-              <p> <img className="profPic" src={faker.image.avatar()}></img>{faker.internet.userName()}</p>
+              <div className="feedUsers">
+              <p className="picUser"> <img className="picFeed" src={faker.image.avatar()}></img>{faker.internet.userName()}</p>
+              <p className="picUserLoc">{faker.location.city()}</p>
+              </div>
               <img className="pic" src={item.download_url} width="500px" alt="APIpic"></img>
               <p>Likes: {faker.number.int({max:500, min: 20})}</p>
             </div>

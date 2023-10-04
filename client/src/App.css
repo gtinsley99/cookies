@@ -126,9 +126,43 @@ h3 {
   border-bottom: 2px solid grey;
 }
 
+.feedUsers{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+}
+
 .pic{
   border-radius: 10px;
 }
+
+.picUser{
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.picUser :hover{
+  cursor: pointer;
+}
+
+
+.picUserLoc{
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-left: 40px;
+  margin-top: 0;
+  font-size: 13px;
+}
+
+.picUserLoc :hover{
+  cursor: pointer;
+}
+
 
 .logoutCard {
   display: flex;
@@ -235,6 +269,12 @@ input {
 .profPic{
   width:30px;
   border-radius: 50%;
+}
+
+.picFeed{
+  width:30px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
 .prof{
