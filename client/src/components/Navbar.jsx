@@ -10,7 +10,6 @@ const Navbar = (props) => {
         <h1>Welcome to the Instagram clone</h1>
       ) : (
         <div>
-          <h1 className="navTitle">{props.user}'s: feed</h1>
           <button className="logoutCard" onClick={handleClick}>
             Logout
           </button>

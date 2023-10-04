@@ -306,12 +306,49 @@ input {
 .profPic{
   width:30px;
   border-radius: 50%;
+  z-index: 2;
+  border: 3px solid white;
+  transform: rotate(-30deg);
+}
+
+.topProfPic{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ z-index: 1;
+ padding: 2px;
+ background: linear-gradient(rgb(236, 3, 170), orange); 
+ transform: rotate(30deg);
+ border-radius: 50%;
 }
 
 .picFeed{
   width:30px;
   border-radius: 50%;
   margin-right: 10px;
+}
+
+.topUsers{
+  font-size: 10px;
+  margin: 10px 5px;
+  width: 50px;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+.topDiv :hover{
+  cursor: pointer;
+}
+
+.topDiv{
+  display: flex;
+  margin-top: 30px;
+}
+
+.top{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .prof{
