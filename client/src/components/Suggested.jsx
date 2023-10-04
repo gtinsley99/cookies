@@ -4,7 +4,7 @@ const Suggested = (props) => {
   return (
     <div className="suggested">
       <div className="suggDiv">
-        <img className="profPic" src={props.cookies.userAvatar}></img>
+        <img className="profPic" src={props.cookies.userAvatar} alt="avatar"></img>
         <p>{props.user}</p>
         <p className="blueLink">Switch</p>
       </div>
@@ -13,22 +13,22 @@ const Suggested = (props) => {
         <p className="blackLink">See All</p>
       </div>
       <div className="suggDiv">
-        <img className="profPic" src={faker.image.avatar()}></img>
+        <img className="profPic" src={faker.image.avatar()} alt="avatar"></img>
         <p>{faker.internet.userName()}</p>
         <p className="blueLink">Follow</p>
       </div>
       <div className="suggDiv">
-        <img className="profPic" src={faker.image.avatar()}></img>
+        <img className="profPic" src={faker.image.avatar()} alt="avatar"></img>
         <p>{faker.internet.userName()}</p>
         <p className="blueLink">Follow</p>
       </div>
       <div className="suggDiv">
-        <img className="profPic" src={faker.image.avatar()}></img>
+        <img className="profPic" src={faker.image.avatar()} alt="avatar"></img>
         <p>{faker.internet.userName()}</p>
         <p className="blueLink">Follow</p>
       </div>
       <div className="suggDiv">
-        <img className="profPic" src={faker.image.avatar()}></img>
+        <img className="profPic" src={faker.image.avatar()} alt="avatar"></img>
         <p>{faker.internet.userName()}</p>
         <p className="blueLink">Follow</p>
       </div>

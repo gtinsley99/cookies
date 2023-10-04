@@ -10,7 +10,6 @@ const Register = (props) => {
     props.setUser(username);
     props.setCookie("username", username, {maxAge: 604800, path: "/"});
     props.setCookie("userAvatar", faker.image.avatar(), {maxAge: 604800, path: "/"});
-    props.setUserPic(props.cookies.userAvatar);
     setUsername("");
     setPassword("");
   };

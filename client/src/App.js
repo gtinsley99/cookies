@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import Login from "./components/Login";
 import Navbar from "./components/Navbar";
@@ -12,7 +12,6 @@ import { useCookies } from "react-cookie";
 function App() {
   const [user, setUser] = useState("");
   const [pics, setPics] = useState(null);
-  const [userPic, setUserPic] = useState(null);
   const [cookies, setCookie, removeCookie] = useCookies(["username"]);
 
   Picsapi(setPics, cookies, setUser);
@@ -21,17 +20,17 @@ function App() {
   return (
     <div className="App">
       {/* Navbar with logout button*/}
-      <Navbar user={user} setUser={setUser} removeCookie={removeCookie} setUserPic={setUserPic} />
+      <Navbar user={user} setUser={setUser} removeCookie={removeCookie}  />
       {/* Show when logged out or when logged in */}
       {user === "" ? (
         <>
-          <Register setUser={setUser} setCookie={setCookie} setUserPic={setUserPic} cookies={cookies} />
-          <Login setUser={setUser} setCookie={setCookie} setUserPic={setUserPic} cookies={cookies}/>
+          <Register setUser={setUser} setCookie={setCookie}  cookies={cookies} />
+          <Login setUser={setUser} setCookie={setCookie}  cookies={cookies}/>
         </>
       ) : (
         <>
           <SideBar cookies= {cookies} />
-          <Suggested user={user} cookies={cookies}/>
+          <Suggested user={user} cookies={cookies} />
           <Pics pics={pics} />
         </>
       )}

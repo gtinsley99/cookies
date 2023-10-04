@@ -1,8 +1,8 @@
 const Navbar = (props) => {
   const handleClick = () => {
     props.removeCookie("username");
+    props.removeCookie("userAvatar");
     props.setUser("");
-    props.setUserPic(null);
   };
   return (
     <div className="nav">

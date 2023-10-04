@@ -13,11 +13,11 @@ const Pics = (props) => {
           return (
             <div key={index} className="picCard">
               <div className="feedUsers">
-              <p className="picUser"> <img className="picFeed" src={faker.image.avatar()}></img>{faker.internet.userName()}</p>
+              <p className="picUser"> <img alt="avatar" className="picFeed" src={faker.image.avatar()}></img>{faker.internet.userName()} </p>
               <p className="picUserLoc">{faker.location.city()}</p>
               </div>
               <img className="pic" src={item.download_url} width="500px" alt="APIpic"></img>
-              <p>Likes: {faker.number.int({max:500, min: 20})}</p>
+              <p className="likes">{faker.number.int({max:500, min: 20})} likes</p>
             </div>
           );
         })}
