@@ -9,14 +9,14 @@ const Suggested = (props) => {
   };
   return (
     <div className="suggested">
-      <div className="suggDiv">
+      <div className="suggDiv" id="profUser">
         <img
           className="profPic"
           src={props.cookies.userAvatar}
           alt="avatar"
         ></img>
         <p className="name">{props.user}</p>
-        <p className="blueLink" onClick={handleClick}>Switch</p>
+        <p className="blueLink" id="profLogout" onClick={handleClick}>Switch</p>
       </div>
       <div className="suggGrey">
         <p className="greyText">Suggested for you</p>

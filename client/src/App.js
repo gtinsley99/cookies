@@ -24,7 +24,6 @@ function App() {
   };
 
   useEffect(() => {
-    console.log(cookies);
     if (cookies.jwt_token !== false) {
       loginWithToken(cookies.jwt_token);
     }
