@@ -25,7 +25,6 @@ function App() {
 
   useEffect(() => {
     console.log(cookies);
-    console.log(cookies.jwt_token)
     if (cookies.jwt_token !== false) {
       loginWithToken(cookies.jwt_token);
     }

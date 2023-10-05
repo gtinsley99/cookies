@@ -4,6 +4,7 @@ const Suggested = (props) => {
   const handleClick = () => {
     props.removeCookie("jwt_token");
     props.removeCookie("userAvatar");
+    props.removeCookie("username");
     props.setUser("");
   };
   return (
