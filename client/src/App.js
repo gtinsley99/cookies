@@ -20,10 +20,12 @@ function App() {
   Picsapi(setPics, cookies, setUser);
 
   const loginWithToken = async (cookie) => {
-    await AuthCheck(cookie, setUser);
+    await AuthCheck(cookies.jwt_token, setUser);
   };
 
   useEffect(() => {
+    console.log(cookies);
+    console.log(cookies.jwt_token)
     if (cookies.jwt_token !== false) {
       loginWithToken(cookies.jwt_token);
     }

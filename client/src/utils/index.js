@@ -37,6 +37,7 @@ export const RegisterRoute = async (
   regUsername,
   regEmail,
   regPassword,
+  regUrl,
   setUser,
   setCookie,
   setRes
@@ -49,6 +50,7 @@ export const RegisterRoute = async (
         username: regUsername,
         email: regEmail,
         password: regPassword,
+        avatar: regUrl
       }),
     });
     if (!res.ok) {
