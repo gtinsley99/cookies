@@ -8,7 +8,7 @@ export const LoginRoute = async (
   setRes
 ) => {
   try {
-    const res = await fetch("http://localhost/users/login", {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/users/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -44,7 +44,7 @@ export const RegisterRoute = async (
   setRes
 ) => {
   try {
-    const res = await fetch("http://localhost:80/users/register", {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/users/register`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -76,7 +76,7 @@ export const RegisterRoute = async (
 
 export const AuthCheck = async (jwt_token, setUser) => {
   try {
-    const res = await fetch("http://localhost/users/loginwithtoken", {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}t/users/loginwithtoken`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
