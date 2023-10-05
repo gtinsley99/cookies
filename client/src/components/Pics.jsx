@@ -11,6 +11,7 @@ const Pics = (props) => {
 
   return (
     <div className="picBox">
+      {props.pics !== null &&
       <div className="picsCard">
         {props.pics.map((item, index) => {
           return (
@@ -31,7 +32,7 @@ const Pics = (props) => {
             </div>
           );
         })}
-      </div>
+      </div>}
       <button onClick={handleClick}>Scroll to top</button>
     </div>
   );
