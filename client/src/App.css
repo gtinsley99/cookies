@@ -410,7 +410,24 @@ input {
 }
 
 @media only screen and (max-width: 1225px) {
-  .suggested{
+  .suggDiv{
     display: none;
+  }
+  .suggGrey{
+    display: none;
+  }
+
+  .infoLinks{
+    display: none;
+  }
+
+  #profUser{
+    display: flex;
+    
+  }
+  
+  #profLogout{
+    width: auto;
+    margin-left: 30px;
   }
 }
