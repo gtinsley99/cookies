@@ -2,7 +2,7 @@ import { faker } from "@faker-js/faker";
 
 const Suggested = (props) => {
   const handleClick = () => {
-    props.removeCookie("username");
+    props.removeCookie("jwt_token");
     props.removeCookie("userAvatar");
     props.setUser("");
   };

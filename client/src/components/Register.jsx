@@ -1,16 +1,16 @@
 import { useState } from "react";
-import { faker } from "@faker-js/faker";
+import { RegisterRoute } from "../utils";
 
 const Register = (props) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    props.setUser(username);
-    props.setCookie("username", username, {maxAge: 604800, path: "/"});
-    props.setCookie("userAvatar", faker.image.avatar(), {maxAge: 604800, path: "/"});
+    await RegisterRoute(username, email, password, props.setUser, props.setCookie, props.setRes);
     setUsername("");
+    setEmail("");
     setPassword("");
   };
   return (
@@ -23,6 +23,14 @@ const Register = (props) => {
             placeholder="Insert username here..."
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+          ></input>
+        </div>
+        <div className="inputField">
+          <label>Email:</label>
+          <input
+            placeholder="Insert email here..."
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           ></input>
         </div>
         <div className="inputField">
