@@ -14,8 +14,10 @@ app.use(express.json());
 
 // Creates table if not found in db
 const syncTables = () => {
-    User.sync();
+    User.sync({alter: true});
 };
+
+app.use(userRouter);
 
 
 app.get("/health", (req, res) => {

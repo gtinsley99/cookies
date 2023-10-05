@@ -1,15 +1,13 @@
 import { useState } from "react";
-import { faker } from "@faker-js/faker";
+import { LoginRoute } from "../utils";
 
 const Login = (props) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    props.setUser(username);
-    props.setCookie("username", username, {maxAge: 604800, path: "/"});
-    props.setCookie("userAvatar", faker.image.avatar(), {maxAge: 604800, path: "/"});
+    await LoginRoute(username, password, props.setUser, props.setCookie, props.setRes);
     setUsername("");
     setPassword("");
   };
