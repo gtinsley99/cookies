@@ -5,6 +5,7 @@ const Register = (props) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
+  const [url, setUrl] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -12,6 +13,7 @@ const Register = (props) => {
     setUsername("");
     setEmail("");
     setPassword("");
+    setUrl("");
   };
   return (
     <div className="registerDiv">
@@ -40,6 +42,14 @@ const Register = (props) => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             type="password"
+          ></input>
+        </div>
+        <div className="inputField">
+          <label>Avatar URL:</label>
+          <input
+            placeholder="Insert url here..."
+            value={url}
+            onChange={(e) => setUrl(e.target.value)}
           ></input>
         </div>
         <button type="submit">Register</button>
