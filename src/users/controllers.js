@@ -17,8 +17,10 @@ const registerUser = async (req, res) => {
     res.status(201).json({
       message: "User registered",
       user: {
+        user: user,
         username: user.username,
         email: user.email,
+        avatar: user.avatar,
         token: token,
       },
     });
@@ -56,6 +58,7 @@ const loginUser = async (req, res) => {
       user: {
         username: user.username,
         email: user.email,
+        avatar: user.avatar,
         token: token,
       },
     });
@@ -78,6 +81,7 @@ const loginWithToken = async (req, res) => {
       user: {
         username: userDetails.username,
         email: userDetails.email,
+        avatar: userDetails.avatar,
       },
     });
   } catch (error) {
