@@ -17,6 +17,8 @@ const syncTables = () => {
     User.sync();
 };
 
+app.use(userRouter);
+
 
 app.get("/health", (req, res) => {
     res.status(200).json({
