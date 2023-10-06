@@ -2,10 +2,17 @@ import { faker } from "@faker-js/faker";
 
 const Suggested = (props) => {
   const handleClick = () => {
-    props.removeCookie("jwt_token");
-    props.removeCookie("userAvatar");
-    props.removeCookie("username");
+    // Remove cookie not working on gh page, works otherwise, instead expiring cookies as that always works
+    // props.removeCookie("jwt_token");
+    // props.removeCookie("userAvatar");
+    // props.removeCookie("username");
     props.setUser("");
+    document.cookie =
+      "jwt_token=; Expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie =
+      "userAvatar=; Expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie =
+      "username=; Expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
   };
   return (
     <div className="suggested">
@@ -16,7 +23,9 @@ const Suggested = (props) => {
           alt="avatar"
         ></img>
         <p className="name">{props.user}</p>
-        <p className="blueLink" id="profLogout" onClick={handleClick}>Switch</p>
+        <p className="blueLink" id="profLogout" onClick={handleClick}>
+          Switch
+        </p>
       </div>
       <div className="suggGrey">
         <p className="greyText">Suggested for you</p>
