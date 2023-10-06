@@ -5,15 +5,13 @@ const Register = (props) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-  const [url, setUrl] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await RegisterRoute(username, email, password, url, props.setUser, props.setCookie, props.setRes);
+    await RegisterRoute(username, email, password, props.setUser, props.setCookie, props.setRes);
     setUsername("");
     setEmail("");
     setPassword("");
-    setUrl("");
   };
   return (
     <div className="registerDiv">
@@ -42,14 +40,6 @@ const Register = (props) => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             type="password"
-          ></input>
-        </div>
-        <div className="inputField">
-          <label>Avatar URL:</label>
-          <input
-            placeholder="Insert url here..."
-            value={url}
-            onChange={(e) => setUrl(e.target.value)}
           ></input>
         </div>
         <button type="submit">Register</button>

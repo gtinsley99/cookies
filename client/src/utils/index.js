@@ -1,4 +1,6 @@
+import { faker } from "@faker-js/faker";
 const noAvatar = require("../images/noAvatar.png");
+
 
 export const LoginRoute = async (
   logUsername,
@@ -23,11 +25,8 @@ export const LoginRoute = async (
     setUser(data.user.username);
     setCookie("username", data.user.username, { maxAge: 604800, path: "/" })
     setCookie("jwt_token", data.user.token, { maxAge: 604800, path: "/" });
-    if (data.user.avatar) {
-        setCookie("userAvatar", data.user.avatar, { maxAge: 604800, path: "/" });
-      } else {
-        setCookie("userAvatar", noAvatar, { maxAge: 604800, path: "/" });
-      }
+    setCookie("userAvatar", noAvatar, { maxAge: 604800, path: "/" });
+      
   } catch (error) {
     console.log(error);
     setRes(error);
@@ -38,7 +37,6 @@ export const RegisterRoute = async (
   regUsername,
   regEmail,
   regPassword,
-  regUrl,
   setUser,
   setCookie,
   setRes
@@ -50,8 +48,7 @@ export const RegisterRoute = async (
       body: JSON.stringify({
         username: regUsername,
         email: regEmail,
-        password: regPassword,
-        avatar: regUrl
+        password: regPassword
       }),
     });
     if (!res.ok) {
@@ -59,15 +56,11 @@ export const RegisterRoute = async (
     }
     const data = await res.json();
     console.log(data)
-    console.log(regUrl)
     setUser(data.user.username);
     setCookie("username", data.user.username, { maxAge: 604800, path: "/" })
     setCookie("jwt_token", data.user.token, { maxAge: 604800, path: "/" });
-    if (data.user.avatar) {
-        setCookie("userAvatar", data.user.avatar, { maxAge: 604800, path: "/" });
-      } else {
-        setCookie("userAvatar", noAvatar, { maxAge: 604800, path: "/" });
-      }
+    setCookie("userAvatar", noAvatar, { maxAge: 604800, path: "/" });
+      
   } catch (error) {
     console.log(error);
     setRes(error);
