@@ -23,9 +23,7 @@ const Suggested = (props) => {
           alt="avatar"
         ></img>
         <p className="name">{props.user}</p>
-        <p className="blueLink" id="profLogout" onClick={handleClick}>
-          Switch
-        </p>
+        <p className="blueLink" id="profLogout" onClick={handleClick}>Switch</p>
       </div>
       <div className="suggGrey">
         <p className="greyText">Suggested for you</p>
